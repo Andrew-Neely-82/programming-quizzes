@@ -1,0 +1,20 @@
+.Navbar_ {
+  display: flex;
+  justify-content: space-between;
+
+  .Navbar_title {
+    display: flex;
+  }
+
+  .Navbar_links {
+    display: flex;
+    span {
+      margin-left: 0.5em;
+
+      a {
+        color: black;
+        text-decoration: none;
+      }
+    }
+  }
+}
