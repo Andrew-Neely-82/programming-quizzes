@@ -1,15 +1,21 @@
 import { questions } from "./index.js";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./style.scss";
 import { shuffle } from "lodash";
+
+// Shuffle the questions when the component is initialized
+const shuffledQuestions = shuffle(questions);
 
 const Javascript = () => {
   const [answers, setAnswers] = useState({});
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [unansweredQuestions, setUnansweredQuestions] = useState([]);
   const [correctAnswer, setCorrectAnswer] = useState({});
+  const [shuffleQuestions, setShuffleQuestions] = useState(false); // Initialize shuffle flag as false
 
-  const shuffledQuestions = shuffle(questions);
+  useEffect(() => {
+    setShuffleQuestions(true); // Enable shuffling when the component mounts
+  }, []);
 
   const handleAnswerChange = (questionId, answer) => {
     setAnswers((prevAnswers) => ({
@@ -71,7 +77,7 @@ const Javascript = () => {
                 <span>{index + 1}. </span>
                 {question.question}
               </h2>
-              <code>{question.code}</code>
+              {question.code && <code>{question.code}</code>}
               <ul>
                 {question.options.map((option) => {
                   const isAnswered = answers[question.id] === option;

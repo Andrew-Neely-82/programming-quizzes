@@ -1,5 +1,5 @@
 import { questions } from "./index.js";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { shuffle } from "lodash";
 import "./style.scss";
 
@@ -8,8 +8,11 @@ const Java = () => {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [unansweredQuestions, setUnansweredQuestions] = useState([]);
   const [correctAnswer, setCorrectAnswer] = useState({});
+  const [shuffledQuestions, setShuffledQuestions] = useState([]);
 
-  const shuffledQuestions = shuffle(questions);
+  useEffect(() => {
+    setShuffledQuestions(shuffle(questions));
+  }, []);
 
   const handleAnswerChange = (questionId, answer) => {
     setAnswers((prevAnswers) => ({
