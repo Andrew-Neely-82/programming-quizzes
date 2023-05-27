@@ -1,3 +1,22 @@
 .Footer_ {
+  background-color: #f2f2f2; /* Set the desired background color */
+  margin-top: 1em;
+  padding: auto;
 
+  .Footer_container {
+    display: flex;
+    justify-content: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 1em auto;
+
+    .Footer_info {
+      flex: 1;
+    }
+
+    .Footer_date {
+      flex: 1;
+      text-align: right;
+    }
+  }
 }

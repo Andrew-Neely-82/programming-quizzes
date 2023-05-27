@@ -4,7 +4,7 @@ export const questions = [
     question: 'What does the "var" keyword mean in JavaScript?',
     code: "var",
     options: ["Declares a new block-scoped variable", "Declares a new function", "Declares a new global variable", "Declares a new constant"],
-    answer: "Declares a new variable",
+    answer: "Declares a new global variable",
   },
   {
     id: 2,

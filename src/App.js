@@ -5,17 +5,19 @@ import "./App.scss";
 
 function App() {
   return (
-    <div className="App_">
-      <Router>
-        <Navbar />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/Java" component={Java} />
-          <Route exact path="/Javascript" component={Javascript} />
-        </Switch>
-        <Footer />
-      </Router>
-    </div>
+    <>
+      <Navbar />
+      <div className="App_">
+        <Router>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/Java" component={Java} />
+            <Route exact path="/Javascript" component={Javascript} />
+          </Switch>
+        </Router>
+      </div>
+      <Footer />
+    </>
   );
 }
 

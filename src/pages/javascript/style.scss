@@ -1,0 +1,25 @@
+.question {
+  ul {
+    li {
+      width: 50%;
+    }
+  }
+}
+
+.question.unanswered {
+  background-color: #f8d7da;
+  border: 1px solid #dc3545;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 14px;
+}
+.correct {
+  background-color: lightgreen;
+}
+
+.incorrect {
+  background-color: red;
+  color: white;
+}
