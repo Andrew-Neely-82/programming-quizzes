@@ -53,7 +53,8 @@
   }
 }
 
-.blue {
+.blue,
+.array {
   color: rgb(114, 203, 255);
 }
 
@@ -66,8 +67,13 @@
   color: rgb(139, 226, 255);
 }
 
-.magenta {
+.magenta,
+.args {
   color: rgb(237, 101, 255);
+}
+
+.args {
+  font-style: italic;
 }
 
 .operator,
@@ -77,4 +83,8 @@
 
 .orange {
   color: orange;
+}
+
+.comment {
+  color: rgb(127, 150, 255);
 }

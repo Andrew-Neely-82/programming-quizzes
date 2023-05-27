@@ -1,5 +1,6 @@
 import { questions } from "./index.js";
 import { useState } from "react";
+import { shuffle } from "lodash";
 import "./style.scss";
 
 const Java = () => {
@@ -7,6 +8,8 @@ const Java = () => {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [unansweredQuestions, setUnansweredQuestions] = useState([]);
   const [correctAnswer, setCorrectAnswer] = useState({});
+
+  const shuffledQuestions = shuffle(questions);
 
   const handleAnswerChange = (questionId, answer) => {
     setAnswers((prevAnswers) => ({
@@ -62,7 +65,7 @@ const Java = () => {
       <h1>Java Quiz</h1>
       <div className="questions">
         <form onSubmit={handleFormSubmit}>
-          {questions.map((question, index) => (
+          {shuffledQuestions.map((question, index) => (
             <div key={question.id} className={`question ${unansweredQuestions.includes(question.id) ? "unanswered" : ""}`}>
               <h2>
                 <span>{index + 1}. </span>
