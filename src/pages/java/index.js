@@ -2,14 +2,22 @@ export const questions = [
   {
     id: 1,
     question: "What is the output of the following Java code?",
-    code: "public class HelloWorld {\n  public static void main(String[] args) {\n    int x = 5;\n    int y = 2;\n    System.out.println(x + y);\n  }\n}",
+    code: `public class <span class="class">HelloWorld</span> {
+  
+  public static void <span class="function">main</span>(<span class="class">String</span><span class="blue">[]</span> <span class="magenta">args</span>) {
+    int <span class="magenta">x</span> <span class="operator">=</span> <span class="magenta">5</span><span class="white">;</span>
+    int <span class="magenta">y</span> <span class="operator">=</span> <span class="magenta">2</span><span class="white">;</span>
+    
+    <span class="red">System</span><span class="white">.</span><span class="magenta">out</span><span class="white">.</span><span class="function">println</span>(<span class="magenta">x</span> + <span class="magenta">y</span>);
+  }
+}`,
     options: ["7", "10", "52", "25"],
     answer: "7",
   },
   {
     id: 2,
     question: 'What is the correct way to declare a variable of type "int" in Java?',
-    code: "int x;",
+    code: `int <span class="magenta">x</span><span class="white">;</span>`,
     options: ["int x;", "x = 5;", "int x = 5;", "var x = 5;"],
     answer: "int x = 5;",
   },
@@ -23,7 +31,7 @@ export const questions = [
   {
     id: 4,
     question: 'What is the output of the following Java code?\n\npublic class HelloWorld {\n  public static void main(String[] args) {\n    String message = "Hello, World!";\n    System.out.println(message);\n  }\n}',
-    code: 'String message = "Hello, World!";\nSystem.out.println(message);',
+    code: '<span class="red">String</span> <span class="magenta">message</span> <span class="operator">=</span> <span class="orange">"Hello, World!"</span><span class="white">;</span>\n<span class="red">System</span><span class="white">.</span><span class="magenta">out</span><span class="white">.</span><span class="function">println</span>(<span class="magenta">message</span>)<span class="white">;</span>',
     options: ["Hello, World!", "message", "Hello", "World"],
     answer: "Hello, World!",
   },

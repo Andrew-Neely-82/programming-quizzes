@@ -58,7 +58,7 @@ const Java = () => {
   };
 
   return (
-    <div className="Javascript_">
+    <div className="Java_">
       <h1>Java Quiz</h1>
       <div className="questions">
         <form onSubmit={handleFormSubmit}>
@@ -68,7 +68,7 @@ const Java = () => {
                 <span>{index + 1}. </span>
                 {question.question}
               </h2>
-              <code>{question.code}</code>
+              {question.code && <code dangerouslySetInnerHTML={{ __html: question.code }} />}
               <ul>
                 {question.options.map((option) => {
                   const isAnswered = answers[question.id] === option;
@@ -79,7 +79,7 @@ const Java = () => {
                     <li key={option} className={`${isAnswered && isCorrect ? "correct" : ""} ${shouldHighlight ? "incorrect" : ""}`}>
                       <label>
                         <input type="radio" name={`question-${question.id}`} value={option} checked={isAnswered} onChange={() => handleAnswerChange(question.id, option)} />
-                        {option}
+                        <span className="option">{option}</span>
                       </label>
                     </li>
                   );
