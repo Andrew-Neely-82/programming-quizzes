@@ -13,6 +13,10 @@
     margin: 0 auto;
     padding: 1em auto;
 
+    @media (max-width: 390px) {
+      flex-direction: column;
+    }
+
     .Navbar_title {
       font-size: 1.5rem;
       font-weight: bold;

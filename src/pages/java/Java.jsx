@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { questions } from "./index.js";
 import { shuffle } from "lodash";
 import "./style.scss";
-import { type } from "@testing-library/user-event/dist/type/index.js";
 
 const Java = () => {
   const [answers, setAnswers] = useState({});

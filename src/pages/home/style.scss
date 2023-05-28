@@ -1,5 +1,36 @@
 .Home_ {
   display: flex;
   flex-direction: column;
-}
+  height: calc(100vh - 9.25em);
 
+  @media (max-width: 390px) {
+    max-width: 350px;
+    margin: auto;
+  }
+
+  .Home_welcome {
+    h1,
+    h3 {
+      margin: 1em auto;
+    }
+
+    a {
+      svg {
+        width: 5em;
+        height: 5em;
+        color: white;
+        margin-top: 2em;
+        transition: 250ms ease-in-out;
+
+        &:hover {
+          filter: drop-shadow(0 0 0.75em cornflowerblue);
+          transform: scale(1.05);
+        }
+
+        &:active {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}
