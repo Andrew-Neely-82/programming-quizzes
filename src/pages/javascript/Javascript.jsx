@@ -1,7 +1,7 @@
-import { questions } from "./index.js";
 import { useEffect, useState } from "react";
-import "./style.scss";
+import { questions } from "./index.js";
 import { shuffle } from "lodash";
+import "./style.scss";
 
 // Shuffle the questions when the component is initialized
 const shuffledQuestions = shuffle(questions);
@@ -77,7 +77,7 @@ const Javascript = () => {
                 <span>{index + 1}. </span>
                 {question.question}
               </h2>
-              {question.code && <code>{question.code}</code>}
+              {question.code && <code dangerouslySetInnerHTML={{ __html: question.code }} />}
               <ul>
                 {question.options.map((option) => {
                   const isAnswered = answers[question.id] === option;
@@ -88,7 +88,7 @@ const Javascript = () => {
                     <li key={option} className={`${isAnswered && isCorrect ? "correct" : ""} ${shouldHighlight ? "incorrect" : ""}`}>
                       <label>
                         <input type="radio" name={`question-${question.id}`} value={option} checked={isAnswered} onChange={() => handleAnswerChange(question.id, option)} />
-                        {option}
+                        <span className="option">{option}</span>
                       </label>
                     </li>
                   );

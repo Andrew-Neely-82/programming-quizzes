@@ -1,7 +1,8 @@
-import { questions } from "./index.js";
 import { useState, useEffect } from "react";
+import { questions } from "./index.js";
 import { shuffle } from "lodash";
 import "./style.scss";
+import { type } from "@testing-library/user-event/dist/type/index.js";
 
 const Java = () => {
   const [answers, setAnswers] = useState({});
@@ -104,3 +105,15 @@ const Java = () => {
 };
 
 export default Java;
+
+console.log("5" - 3);
+
+console.log([]);
+
+Array.isArray();
+
+console.log("Hello" === "hello");
+
+console.log(typeof null);
+
+console.log(typeof undefined);

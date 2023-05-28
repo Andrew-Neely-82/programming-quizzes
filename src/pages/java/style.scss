@@ -88,3 +88,21 @@
 .comment {
   color: rgb(127, 150, 255);
 }
+
+.question.unanswered {
+  background-color: rgba(255 0 0 / 0.0625);
+  border: 1px solid #dc3545;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 14px;
+}
+.correct {
+  background-color: green;
+}
+
+.incorrect {
+  background-color: red;
+  color: white;
+}
