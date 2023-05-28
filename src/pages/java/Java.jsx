@@ -105,15 +105,3 @@ const Java = () => {
 };
 
 export default Java;
-
-console.log("5" - 3);
-
-console.log([]);
-
-Array.isArray();
-
-console.log("Hello" === "hello");
-
-console.log(typeof null);
-
-console.log(typeof undefined);
